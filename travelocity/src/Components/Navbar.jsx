@@ -1,4 +1,5 @@
 // import { ReactNode } from 'react';
+import { Select } from '@chakra-ui/react'
 import {
     Box,
     Flex,
@@ -45,11 +46,16 @@ export default function Navbar() {
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} mt="2px" bgColor="darkblue" pt ={15} pb={15} h={30} color="white">
         <Flex h={20} alignItems={'center'} justifyContent={'space-between'} ml={80} mr={80} >
-            <HStack>
+            <Flex alignItems="center" justifyContent= {"space-between"} w="30%" >
                 <RouterLink to="/">
                     <img src="https://www.travelocity.com/_dms/header/logo.svg?locale=es_MX&siteid=80001&2" alt="" />
                 </RouterLink>
-            </HStack>
+                <Select placeholder='Select option'  >
+    <option value='option1'>Paquetes              </option>
+    <option value='option2'>Option 2</option>
+    <option value='option3'>Option 3</option>
+</Select>
+            </Flex>
             <HStack
                 as={'nav'}
                 spacing={20}
